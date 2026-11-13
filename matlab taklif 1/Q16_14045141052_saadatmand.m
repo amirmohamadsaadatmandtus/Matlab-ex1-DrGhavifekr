@@ -1,0 +1,45 @@
+clear;
+clc;
+%بخش الف
+t=0:0.1:5;
+y1=sin(t).*cos(t).^2./(t.^2+1);
+y2=sqrt(t.^3).*exp(2);
+figure(1);
+plot(t,y1,'b','LineWidth',1.5);
+hold on;
+plot(t,y2,'r','LineWidth',2.5);
+title('namoodar y1 va y2');
+legend('y1','y2');
+%بخش ب
+x=-2:0.05:2;
+f=sin(x).^2+sinh(x).^2;
+Z=cos(x).^2+cosh(x).^2;
+k=x.^2+2.*x.*sin(x);
+figure(2);
+subplot(3,1,1);
+plot(x,f);
+title('tabe f(x)');
+subplot(3,1,2);
+plot(x,Z);
+title('tabe Z(x)');
+subplot(3,1,3);
+plot(x,k);
+title('tabe k(x)');
+%بخش پ و ت
+t1=0:0.001:2;
+s1=sin(2.*pi.*3.*t1);
+t2=0:0.1:2;
+s2=sin(2.*pi.*3.*t2);
+figure(3);
+subplot(2,1,1);
+plot(t1,s1);
+title('moj peyvaste s(t)');
+xlabel('zaman (t)');
+ylabel('damane');
+grid on;
+subplot(2,1,2);
+stem(t2,s2);
+title('nemoone bardari ghosaste ba stem');
+xlabel('zaman (t)');
+ylabel('damane');
+grid on;
